@@ -17,7 +17,7 @@ function App() {
   }, []);
   if (!quiz.length) return <h3>Loading ..</h3>;
   return (
-    <div className="App">
+    <div>
       <h1>Hello</h1>
       <Quizcard options={quiz[0].option} question={quiz[0].question} />
     </div>
