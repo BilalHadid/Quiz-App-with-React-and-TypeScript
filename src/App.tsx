@@ -3,9 +3,12 @@ import "./App.css";
 import { getQuizDetail } from "./services/quiz_app";
 import Quizcard from "./Components/Quizcard";
 import { questionType } from "./Types/quiz_types";
+import quizlogo from "./images/quiz-logo.png";
 
 function App() {
   const [quiz, setquiz] = useState<questionType[]>([]);
+  let [quizIter, setquizIter] = useState(0);
+  let [quizScore, setquizScore] = useState(0);
   useEffect(() => {
     const fetchData = async () => {
       const questions = await getQuizDetail(5, "easy");
@@ -15,11 +18,31 @@ function App() {
     };
     fetchData();
   }, []);
+  let afterSubmit = (e: React.FormEvent<EventTarget>) => {
+    e.preventDefault();
+    if (quizIter !== quiz.length - 1) {
+      setquizIter(++quizIter);
+    } else {
+      alert("Quiz Finished");
+      setquizIter(0);
+    }
+  };
+  let afterAnswer = () => {
+    setquizScore(++quizScore);
+  };
   if (!quiz.length) return <h3>Loading ..</h3>;
   return (
     <div>
-      <h1>Hello</h1>
-      <Quizcard options={quiz[0].option} question={quiz[0].question} />
+      <img src={quizlogo} alt="heading" />
+      <div>
+        <h1>Score : {quizIter}</h1>
+      </div>
+      <Quizcard
+        options={quiz[quizIter].option}
+        question={quiz[quizIter].question}
+        callback={afterSubmit}
+        answers={afterAnswer}
+      />
     </div>
   );
 }

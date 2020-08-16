@@ -1,14 +1,18 @@
 import React from "react";
+import { questionPropsType } from "../Types/quiz_types";
 
-const Quizcard: React.FC<any> = ({ options, question }) => {
-  console.log(question);
-  console.log(options);
+const Quizcard: React.FC<questionPropsType> = ({
+  options,
+  question,
+  callback,
+  answers,
+}) => {
   return (
     <div>
       <div>
         <p>{question} </p>
       </div>
-      <form>
+      <form onSubmit={callback}>
         {options.map((opt: string, ind: number) => {
           return (
             <div key={ind}>
@@ -20,7 +24,7 @@ const Quizcard: React.FC<any> = ({ options, question }) => {
           );
         })}
       </form>
-      <input type="submit" />
+      <input type="submit" onClick={callback} />
     </div>
   );
 };
