@@ -5,14 +5,13 @@ const Quizcard: React.FC<questionPropsType> = ({
   options,
   question,
   callback,
-  answers,
 }) => {
   return (
     <div>
       <div>
         <p>{question} </p>
       </div>
-      <form onSubmit={callback}>
+      <form>
         {options.map((opt: string, ind: number) => {
           return (
             <div key={ind}>
