@@ -9,6 +9,8 @@ function App() {
   const [quiz, setquiz] = useState<questionType[]>([]);
   let [quizIter, setquizIter] = useState(0);
   let [quizScore, setquizScore] = useState(0);
+  let [score, setScore] = useState(0);
+
   useEffect(() => {
     const fetchData = async () => {
       const questions = await getQuizDetail(5, "easy");
@@ -18,8 +20,12 @@ function App() {
     };
     fetchData();
   }, []);
-  let afterSubmit = (e: React.FormEvent<EventTarget>) => {
+  let afterSubmit = (e: React.FormEvent<EventTarget>, userAnswer: string) => {
     e.preventDefault();
+    console.log(userAnswer);
+    if (userAnswer === quiz[quizIter].answer) {
+      setScore(++score);
+    }
     if (quizIter !== quiz.length - 1) {
       setquizIter(++quizIter);
     } else {
@@ -27,21 +33,22 @@ function App() {
       setquizIter(0);
     }
   };
-  let afterAnswer = () => {
+  let afterAnswer = (e: React.FormEvent<EventTarget>) => {
+    e.preventDefault();
     setquizScore(++quizScore);
   };
+
   if (!quiz.length) return <h3>Loading ..</h3>;
   return (
     <div>
       <img src={quizlogo} alt="heading" />
-      <div>
-        <h1>Score : {quizIter}</h1>
-      </div>
+      <h1>Score : {score}</h1>
+      <div></div>
       <Quizcard
         options={quiz[quizIter].option}
         question={quiz[quizIter].question}
+        answer={quiz[quizIter].answer}
         callback={afterSubmit}
-        answers={afterAnswer}
       />
     </div>
   );
