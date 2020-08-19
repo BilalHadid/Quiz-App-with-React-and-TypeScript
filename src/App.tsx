@@ -22,7 +22,6 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       const questions = await getQuizDetail(5, "easy");
-      console.log(questions);
 
       setquiz(questions);
     };
@@ -51,11 +50,13 @@ function App() {
     );
   if (final) {
     return (
-      <div>
-        <img src={quizlogo} alt="heading" />
+      <div className="App">
+        <div className="container">
+          <img src={quizlogo} alt="heading" />
+        </div>
         <h1>Your Total Score is {score}</h1>
         <h2>
-          {score >= 3 ? "Congratulation You are Passed" : "you are Not passed"}
+          {score >= 3 ? "Congratulation You are Passed" : "You aren't passed"}
         </h2>
       </div>
     );
@@ -63,7 +64,7 @@ function App() {
     return (
       <div className="App">
         <div className="container">
-          <h1 className="style-2">React Quiz</h1>
+          <img src={quizlogo} alt="heading" />
         </div>
         <h1>Score : {score}</h1>
         <div className="Quiz">

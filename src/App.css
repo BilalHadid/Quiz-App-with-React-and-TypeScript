@@ -1,44 +1,24 @@
+@import url(
+  https://fonts.googleapis.com/css?family=Open + Sans:400,
+  400italic,
+  600,
+  600italic,
+  700italic
+);
 .App {
   align-items: center;
+  background-image: url(https://www.w3schools.com/css/img_lights.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-@import url(https://fonts.googleapis.com/css?family=Oswald);
-
-@import url(https://fonts.googleapis.com/css?family=Pacifico);
-.container {
-  margin: 0 auto;
-  max-width: 50%;
-  text-align: center;
-}
-
-.container h1 {
-  font-weight: normal;
-  text-transform: uppercase;
-  margin: 0.3125em 0;
-  position: relative;
-  display: inline-block;
-  padding: 0 10px;
-}
-
-.style-2 {
-  font-family: "Open Sans Condensed", sans-serif;
-}
-
-.style-2:before {
-  content: "";
-  height: 3px;
-  border-top: 2px dotted black;
-  border-bottom: 2px dotted black;
-  position: absolute;
-  width: 300%;
-  top: 45%;
-  left: -100%;
-  z-index: -999;
 }
 
 .App-header {
@@ -64,23 +44,82 @@
     transform: rotate(360deg);
   }
 }
+.App h2 {
+  color: white;
+}
 .sweet-loading {
   margin-top: 20%;
 }
 
 .Quiz {
-  border: 2px solid black;
+  border: 2px solid #00ba76;
+  background-color: #030c0b;
+  opacity: 0.9;
   height: 300px;
   width: 300px;
   padding: 2%;
-  margin-left: 15%;
-  margin-right: 10%;
 }
 .App h1 {
-  text-align: center;
+  color: white;
 }
 .Card button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.Card {
+  color: white;
+}
+
+button {
+  color: #fff;
+}
+
+.sub-main {
+  width: 30%;
+  float: left;
+}
+.button-two {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.button-two {
+  border-radius: 4px;
+  background-color: #00bd7d;
+  border: none;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+}
+
+.button-two span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-two span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-two:hover span {
+  padding-right: 25px;
+}
+
+.button-two:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .container img {
+    width: 250px;
+  }
 }

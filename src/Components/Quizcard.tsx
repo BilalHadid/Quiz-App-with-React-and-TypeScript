@@ -48,11 +48,14 @@ const Quizcard: React.FC<questionPropsType> = ({
       <br />
 
       <br />
-      <button
-        onClick={(e: React.FormEvent<EventTarget>) => callback(e, userAnswer)}
-      >
-        Submit
-      </button>
+      <div className="sub-main">
+        <button
+          className="button-two"
+          onClick={(e: React.FormEvent<EventTarget>) => callback(e, userAnswer)}
+        >
+          <span>Submit</span>
+        </button>
+      </div>
     </div>
   );
 };
