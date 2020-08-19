@@ -17,4 +17,5 @@ export type questionPropsType = {
   question: string;
   answer: string;
   callback: (e: React.FormEvent<EventTarget>, userAnswer: string) => void;
+  quesIncre: Number;
 };

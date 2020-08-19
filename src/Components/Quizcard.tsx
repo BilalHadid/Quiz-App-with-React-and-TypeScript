@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { questionPropsType } from "../Types/quiz_types";
+import "../App.css";
 
 const Quizcard: React.FC<questionPropsType> = ({
   options,
   question,
   callback,
   answer,
+  quesIncre,
 }) => {
   let [userAnswer, setUserAnswer] = useState("");
   const handleChange = (e: any) => {
@@ -14,6 +16,9 @@ const Quizcard: React.FC<questionPropsType> = ({
   return (
     <div>
       <div>
+        <p>
+          <b>Questions {quesIncre}</b>
+        </p>
         <p>{question} </p>
       </div>
       <form
