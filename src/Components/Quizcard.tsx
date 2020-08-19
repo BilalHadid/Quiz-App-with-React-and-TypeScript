@@ -14,11 +14,14 @@ const Quizcard: React.FC<questionPropsType> = ({
     setUserAnswer(e.target.value);
   };
   return (
-    <div>
-      <div>
-        <p>
-          <b>Questions {quesIncre}</b>
-        </p>
+    <div className="Card">
+      <div className="Parag">
+        <span>
+          <p>
+            <b>Questions {quesIncre}</b>
+          </p>
+        </span>
+
         <p>{question} </p>
       </div>
       <form

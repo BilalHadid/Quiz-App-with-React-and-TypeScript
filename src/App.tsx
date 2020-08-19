@@ -63,7 +63,7 @@ function App() {
     return (
       <div className="App">
         <div className="container">
-          <h1 className="style-3">Marvellous</h1>
+          <h1 className="style-2">React Quiz</h1>
         </div>
         <h1>Score : {score}</h1>
         <div className="Quiz">

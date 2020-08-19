@@ -8,7 +8,7 @@ export const getQuizDetail = async (
   level: string
 ): Promise<questionType[]> => {
   const res = await fetch(
-    `https://opentdb.com/api.php?amount=${totalQuestuions}&category=9&difficulty=${level}&type=multiple`
+    `https://opentdb.com/api.php?amount=${totalQuestuions}&category=21&difficulty=${level}&type=multiple`
   );
   let { results } = await res.json();
   let quizQues: questionType[] = results.map((questionObj: Quiz) => {
