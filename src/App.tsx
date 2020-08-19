@@ -29,7 +29,6 @@ function App() {
   }, []);
   let afterSubmit = (e: React.FormEvent<EventTarget>, userAnswer: string) => {
     e.preventDefault();
-    console.log(userAnswer);
     if (userAnswer === quiz[quizIter].answer) {
       setScore(++score);
     }
