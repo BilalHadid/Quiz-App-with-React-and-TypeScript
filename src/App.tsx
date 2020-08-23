@@ -6,6 +6,7 @@ import { questionType } from "./Types/quiz_types";
 import quizlogo from "./images/quiz-logo.png";
 import { css } from "@emotion/core";
 import BeatLoader from "react-spinners/RingLoader";
+import firebase from "./firebase";
 
 const override = css`
   display: block;
@@ -14,6 +15,15 @@ const override = css`
 `;
 
 function App() {
+  const messaging = firebase.messaging();
+  messaging
+    .requestPermission()
+    .then(() => {
+      return messaging.getToken();
+    })
+    .then((token) => {
+      console.log("token", token);
+    });
   const [quiz, setquiz] = useState<questionType[]>([]);
   let [quizIter, setquizIter] = useState(0);
   let [score, setScore] = useState(0);
