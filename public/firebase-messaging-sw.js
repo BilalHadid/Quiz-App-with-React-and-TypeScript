@@ -1,7 +1,9 @@
-import firebase from "firebase";
-import { configType } from "./Types/quiz_types";
+importScripts("https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js");
+importScripts(
+  "https://www.gstatic.com/firebasejs/7.19.0/firebase-messaging.js"
+);
 
-const config: configType = {
+firebase.initializeApp({
   apiKey: "AIzaSyDH368OCf9UFlh_n0nzL7gWfuW71aG1RYc",
   authDomain: "pwa-quiz-app.firebaseapp.com",
   databaseURL: "https://pwa-quiz-app.firebaseio.com",
@@ -9,7 +11,5 @@ const config: configType = {
   storageBucket: "pwa-quiz-app.appspot.com",
   messagingSenderId: "489006275593",
   appId: "1:489006275593:web:a38cf81f7afb3e61e2acd8",
-};
-firebase.initializeApp(config);
-
-export default firebase;
+});
+firebase.messaging();

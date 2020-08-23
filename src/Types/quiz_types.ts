@@ -19,3 +19,12 @@ export type questionPropsType = {
   callback: (e: React.FormEvent<EventTarget>, userAnswer: string) => void;
   quesIncre: Number;
 };
+export type configType = {
+  apiKey: string;
+  authDomain: string;
+  databaseURL: string;
+  projectId: string;
+  storageBucket: string;
+  messagingSenderId: string;
+  appId: string;
+};
