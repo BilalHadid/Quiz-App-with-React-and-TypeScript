@@ -1,4 +1,6 @@
-import firebase from "firebase";
+import * as firebase from "firebase/app";
+import "firebase/messaging";
+
 import { configType } from "./Types/quiz_types";
 
 const config: configType = {
