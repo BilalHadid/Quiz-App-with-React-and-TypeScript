@@ -1,3 +1,11 @@
+Live Firebase: 
+
+https://pwa-quiz-app.web.app/
+
+Deploy Netlify:
+
+https://react-typescript-pwa-quizapp.netlify.app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
