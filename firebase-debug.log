@@ -1,0 +1,23 @@
+[debug] [2020-08-26T22:43:07.811Z] ----------------------------------------------------------------------
+[debug] [2020-08-26T22:43:07.817Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2020-08-26T22:43:07.819Z] CLI Version:   8.9.0
+[debug] [2020-08-26T22:43:07.819Z] Platform:      linux
+[debug] [2020-08-26T22:43:07.819Z] Node Version:  v10.19.0
+[debug] [2020-08-26T22:43:07.820Z] Time:          Thu Aug 27 2020 03:43:07 GMT+0500 (Pakistan Standard Time)
+[debug] [2020-08-26T22:43:07.820Z] ----------------------------------------------------------------------
+[debug] [2020-08-26T22:43:07.820Z] 
+[debug] [2020-08-26T22:43:07.838Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-08-26T22:43:07.839Z] > authorizing via signed-in user
+[debug] [2020-08-26T22:43:07.840Z] [iam] checking project pwa-quiz-app for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-08-26T22:43:07.848Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/pwa-quiz-app:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-08-26T22:43:09.818Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 26 Aug 2020 22:43:09 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1201","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-08-26T22:43:09.827Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/pwa-quiz-app  
+ 
+[debug] [2020-08-26T22:43:10.423Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 26 Aug 2020 22:43:10 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'pwa-quiz-app'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-08-26T22:43:10.436Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/pwa-quiz-app/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
