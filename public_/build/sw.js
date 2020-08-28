@@ -15,7 +15,7 @@ this.addEventListener("install", (event) => {
         ]);
       })
       .catch((err) => {
-        console.log(err);
+        console.log("err", err);
       })
   );
 });
