@@ -1,4 +1,4 @@
-let cacheData = "QuizPWA";
+let cacheData = "NewQuizPWA";
 
 this.addEventListener("install", (event) => {
   event.waitUntil(
@@ -9,8 +9,10 @@ this.addEventListener("install", (event) => {
           "/",
           "/index.html",
           "/static/js/main.chunk.js",
+          "/static/js/0.chunk.js",
           "/static/js/1.chunk.js",
           "/static/js/bundle.js",
+          "/static/js/manifest.json",
           "https://opentdb.com/api.php?amount=5&category=21&difficulty=easy&type=multiple",
         ]);
       })
